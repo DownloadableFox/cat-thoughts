@@ -1,0 +1,93 @@
+---
+const labels = [
+    "developer",
+    "tech enthusiast",
+    "reverse engineer",
+    "system administrator",
+    "electronics hobbyist",
+    "coffee addict",
+    "night owl",
+    "cat lover",
+    "gamer",
+];
+
+const secret_labels = ["warrior cats fan", "furry", "tech support cat"];
+
+const all_labels = [...labels, ...secret_labels];
+const max_label_length = Math.max(...all_labels.map((l) => l.length));
+---
+
+<section class="w-full flex flex-col items-start justify-center">
+    <p class="text-lg text-muted mb-2">Hey there, I'm</p>
+
+    <h1 class="text-6xl md:text-8xl font-black tracking-tight text-text">
+        Luda
+    </h1>
+
+    <div class="mt-3 flex items-center text-2xl md:text-4xl">
+        <span class="text-muted mr-2">&gt;</span>
+
+        <div
+            class="inline-flex items-center font-bold text-primary whitespace-nowrap"
+            style={`width: ${max_label_length + 1}ch`}
+        >
+            <span id="rotating-label">
+                {labels[0]}
+            </span>
+
+            <span
+                id="fake-cursor"
+                class="ml-2 inline-block h-[0.9em] w-1 bg-primary animate-pulse"
+            ></span>
+        </div>
+    </div>
+</section>
+
+<script define:vars={{ labels, secret_labels }}>
+    const typespeed = 50;
+    const pause = 2000;
+    const secret_label_chance = 0.1;
+
+    const label_element = document.getElementById("rotating-label");
+
+    let label_index = 1; // start at second label since first is already shown
+    let secret_label_index = 0;
+
+    function next_label() {
+        if (Math.random() < secret_label_chance) {
+            return secret_labels[secret_label_index++ % secret_labels.length];
+        }
+
+        return labels[label_index++ % labels.length];
+    }
+
+    function typeLabel(label) {
+        let i = 0;
+
+        const interval = setInterval(() => {
+            label_element.textContent = label.slice(0, i);
+            i++;
+
+            if (i > label.length) {
+                clearInterval(interval);
+                setTimeout(() => deleteLabel(label), pause);
+            }
+        }, typespeed);
+    }
+
+    function deleteLabel(label) {
+        let i = label.length;
+
+        const interval = setInterval(() => {
+            label_element.textContent = label.slice(0, i);
+            i--;
+
+            if (i < 0) {
+                clearInterval(interval);
+                typeLabel(next_label());
+            }
+        }, typespeed);
+    }
+
+    setTimeout(() => deleteLabel(labels[0]), pause);
+</script>

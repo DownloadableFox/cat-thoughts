@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+import icon from "../assets/icon.jpg";
+---
+
+<div class="h-full aspect-square flex items-center justify-center">
+    <Image
+        src={icon}
+        alt="My Fursona"
+        loading="eager"
+        class="w-full h-full object-contain rounded-full shadow-lg"
+    />
+</div>

@@ -1,57 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
-import { Image } from "astro:assets";
-import icon from "../assets/icon.jpg";
-
-import WhoAmI from "../components/WhoAmI.astro";
-import Socials from "../components/Socials.astro";
 import "../styles/global.css";
 
-const totally_normal_video = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/ui/Navbar.astro";
+import Welcome from "../components/sections/Welcome.astro";
 ---
 
 <Layout>
-    <nav
-        class="fixed top-0 left-0 w-full flex flex-row items-center justify-end py-4 px-8 gap-6"
-    >
-        <a
-            href={totally_normal_video}
-            class="text-xl font-mono tracking-tight text-text">About</a
-        >
-        <a
-            href={totally_normal_video}
-            class="text-xl font-mono tracking-tight text-text">Projects</a
-        >
-        <a
-            href={totally_normal_video}
-            class="text-xl font-mono tracking-tight text-text">Blog</a
-        >
-    </nav>
-    <main class="w-full flex flex-col items-center justify-center gap-0">
-        <div class="w-full min-h-screen flex flex-col items-center justify-center gap-16 px-8 py-16">
-            <div
-                class="flex flex-wrap items-center justify-center max-w-6xl w-full gap-16 md:gap-32"
-            >
-                <div
-                    class="max-w-lg aspect-square flex items-center justify-center"
-                >
-                    <Image
-                        src={icon}
-                        alt="My Fursona"
-                        loading="eager"
-                        class="w-full h-full object-contain rounded-full shadow-lg"
-                    />
-                </div>
-                <div
-                    class="max-w-min grow flex flex-col items-start justify-center"
-                >
-                    <WhoAmI />
-                </div>
-            </div>
-            <div class="w-full flex justify-center">
-                <Socials />
-            </div>
-        </div>
+    <Navbar />
+    <main class="w-full flex flex-col items-center justify-center">
+        <Welcome />
     </main>
 </Layout>

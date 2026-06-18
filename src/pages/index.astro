@@ -5,12 +5,17 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/ui/Navbar.astro";
 import Landing from "../components/sections/Landing.astro";
 import About from "../components/sections/About.astro";
+
+import UnderDevel from "../components/ui/UnderDevel.astro";
 ---
 
 <Layout>
     <Navbar />
     <main class="w-full flex flex-col items-center justify-center">
         <Landing />
-        <About />
+
+        <UnderDevel>
+            <About />
+        </UnderDevel>
     </main>
 </Layout>

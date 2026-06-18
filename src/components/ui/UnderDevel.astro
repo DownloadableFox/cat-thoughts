@@ -1,0 +1,32 @@
+---
+
+---
+
+<div id="warning-container" class="w-full h-full bg-primary/10 p-6 rounded-lg">
+    <div class="max-w-xl mx-auto text-center">
+        <h1 class="text-2xl font-semibold mb-2">In development</h1>
+        <p>This section is still under construction.</p>
+        <p class="mb-4">Please check back later!</p>
+        <button
+            id="show-slot-btn"
+            class="mt-4 px-4 py-2 bg-primary/80 text-white rounded hover:bg-primary-dark hover:cursor-pointer hover:bg-primary/70"
+            >Sneak Peek</button
+        >
+    </div>
+</div>
+
+<div id="slot-container" class="hidden w-full h-full">
+    <slot />
+</div>
+
+<script is:inline>
+    const warning = document.getElementById("warning-container");
+    const slotContainer = document.getElementById("slot-container");
+    const showBtn = document.getElementById("show-slot-btn");
+    if (showBtn) {
+        showBtn.addEventListener("click", () => {
+            if (warning) warning.style.display = "none";
+            if (slotContainer) slotContainer.classList.remove("hidden");
+        });
+    }
+</script>

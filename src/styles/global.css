@@ -8,3 +8,7 @@
     --color-text: oklch(98.5% 0 0);
     --color-muted: oklch(92% 0.004 286.32);
 }
+
+html {
+    scroll-behavior: smooth;
+}

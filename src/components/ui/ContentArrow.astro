@@ -1,0 +1,72 @@
+---
+const possibleTexts = [
+    "scroll down",
+    "learn more about me",
+    "more content below",
+    "keep scrolling",
+    "there's more to see",
+    "don't stop now",
+    "more cat thoughts ahead",
+];
+---
+
+<div class="absolute bottom-0 left-0 w-full flex flex-col items-center justify-center py-5">
+    <svg
+        class="animate-bounce w-6 h-6 text-primary"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"
+        />
+    </svg>
+
+    <span
+        id="scroll-hint-text"
+        class="text-sm text-muted mt-2 opacity-0 transition-opacity duration-500"
+    ></span>
+</div>
+
+<script define:vars={{ possibleTexts }}>
+    const text = document.getElementById("scroll-hint-text");
+
+    let hasScrolled = false;
+    let interval;
+
+    function randomText() {
+        return possibleTexts[
+            Math.floor(Math.random() * possibleTexts.length)
+        ];
+    }
+
+    function showText() {
+        if (hasScrolled) return;
+
+        text.textContent = randomText();
+        text.classList.remove("opacity-0");
+
+        interval = setInterval(() => {
+            text.textContent = randomText();
+        }, 5000);
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            hasScrolled = true;
+            text.classList.add("opacity-0");
+
+            if (interval) {
+                clearInterval(interval);
+            }
+        },
+        { once: true }
+    );
+
+    setTimeout(showText, 15000);
+</script>

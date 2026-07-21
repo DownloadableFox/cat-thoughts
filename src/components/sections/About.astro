@@ -22,10 +22,10 @@ const age = getAge(birthdate);
 
 <section
     id="about-me"
-    class="relative w-full min-h-screen flex flex-col items-center justify-center px-8 py-16"
+    class="relative w-full min-h-svh flex flex-col items-center justify-center px-8 py-16"
 >
-    <div class="w-full h-full flex flex-row flex-wrap items-center justify-center gap-16 lg:gap-32">
-        <div class="flex-1 p-16">
+    <div class="w-full h-full flex flex-row flex-wrap items-center justify-center gap-x-16 lg:gap-x-32">
+        <div class="flex-1 min-w-96 lg:p-16 p-8">
             <p class="text-2xl font-bold mb-4">About Me</p>
             <p class="text-lg mb-4">
                 My name is Augusto Pedicino, a { age }-year-old systems engineer from Colombia.
@@ -53,20 +53,15 @@ const age = getAge(birthdate);
                 to see some of the projects I've worked on, and the technologies I've been exploring.
             </p>
         </div>
-        <div class="flex-1 p-16">
+        <div class="flex-1 min-w-96 lg:p-16 p-8">
             <p class="text-2xl font-bold mb-4">Languages</p>
             <ul class="flex flex-wrap gap-2 mb-8">
-                <!-- Group 1: Go, C/C++, Java (emerald)
-                     Group 2: Python, JavaScript, SQL (blue)
-                     Group 3: Zig (amber) -->
                 <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Go</li>
                 <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">C/C++</li>
                 <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Java</li>
-
                 <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Python</li>
                 <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">JavaScript</li>
                 <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">SQL</li>
-
                 <li class="px-3 py-1 text-sm border border-amber-400/40 bg-amber-400/10 rounded-full hover:border-amber-400/70 transition-colors">Zig</li>
             </ul>
 

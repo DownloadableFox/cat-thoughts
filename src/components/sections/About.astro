@@ -1,10 +1,76 @@
 ---
-import Terminal from "../ui/Terminal.astro";
+function getAge(birthdate: Date): number {
+    const today = new Date();
+
+    let age = today.getFullYear() - birthdate.getFullYear();
+
+    const hasHadBirthday =
+        today.getMonth() > birthdate.getMonth() ||
+        (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() >= birthdate.getDate());
+
+    if (!hasHadBirthday) {
+        age--;
+    }
+
+    return age;
+}
+
+const birthdate = new Date("2003-11-27");
+const age = getAge(birthdate);
 ---
 
 <section
     id="about-me"
     class="relative w-full min-h-screen flex flex-col items-center justify-center px-8 py-16"
 >
-    <Terminal />
+    <div class="w-full h-full flex flex-row flex-wrap items-center justify-center gap-16 lg:gap-32">
+        <div class="flex-1 p-16">
+            <p class="text-2xl font-bold mb-4">About Me</p>
+            <p class="text-lg mb-4">
+                My name is Augusto Pedicino, a { age }-year-old systems engineer from Colombia.
+                I've had a passion for technology and programming since I was a child,
+                and I've been fortune enough to turn that passion into a career.
+
+                <br class="hidden md:block m-2"/>
+
+                I specialize in backend development, especially in the Go programming language,
+                and distributed systems. However, I also have experience in frontend development
+                alongside modern technologies like React, Astro, and TailwindCSS.
+            </p>
+
+            <br class="hidden md:block m-2"/>
+
+            <p class="text-2xl font-bold mb-4">What I Do</p>
+            <p class="text-lg mb-4">
+                In my free time, I enjoy exploring new technologies, practicing and studying
+                cybersecurity and ethical hacking, and contributing to open-source projects.
+                I also enjoy playing video games, reading, and spending time with my friends and family.
+
+                <br class="hidden md:block m-2"/>
+
+                I'm currently learning Zig. Feel free to look at my blog and my GitHub profile
+                to see some of the projects I've worked on, and the technologies I've been exploring.
+            </p>
+        </div>
+        <div class="flex-1 p-16">
+            <p class="text-2xl font-bold mb-4">Programming Languages</p>
+            <ul class="flex flex-row gap-6">
+                <li>Go</li>
+                <li>C/C++</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <p class="text-2xl font-bold mb-4 mt-8">Technologies</p>
+            <ul class="list-disc list-inside text-lg">
+                <li>React</li>
+                <li>Astro</li>
+                <li>TailwindCSS</li>
+                <li>Docker</li>
+                <li>Linux</li>
+
+        </div>
+    </div>
 </section>

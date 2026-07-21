@@ -56,54 +56,75 @@ const age = getAge(birthdate);
         <div class="flex-1 p-16">
             <p class="text-2xl font-bold mb-4">Languages</p>
             <ul class="flex flex-wrap gap-2 mb-8">
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Go</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">C/C++</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Java</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Python</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">JavaScript</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">SQL</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Zig</li>
+                <!-- Group 1: Go, C/C++, Java (emerald)
+                     Group 2: Python, JavaScript, SQL (blue)
+                     Group 3: Zig (amber) -->
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Go</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">C/C++</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Java</li>
+
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Python</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">JavaScript</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">SQL</li>
+
+                <li class="px-3 py-1 text-sm border border-amber-400/40 bg-amber-400/10 rounded-full hover:border-amber-400/70 transition-colors">Zig</li>
             </ul>
 
             <p class="text-2xl font-bold mb-4">Frontend</p>
             <ul class="flex flex-wrap gap-2 mb-8">
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">React</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Vue</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Vite</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">SolidJS</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Astro</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Tailwind</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">React</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Vue</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Vite</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Solid</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Astro</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Tailwind</li>
             </ul>
 
             <p class="text-2xl font-bold mb-4">Backend</p>
             <ul class="flex flex-wrap gap-2 mb-8">
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">NodeJS</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">PostgreSQL</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Redis</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Docker</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">GraphQL</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Nginx</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Caddy</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">NodeJS</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">PostgreSQL</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Docker</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">GraphQL</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Nginx</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Caddy</li>
+                <li class="px-3 py-1 text-sm border border-amber-400/40 bg-amber-400/10 rounded-full hover:border-amber-400/70 transition-colors">Redis</li>
             </ul>
 
             <p class="text-2xl font-bold mb-4">Graphics</p>
             <ul class="flex flex-wrap gap-2 mb-8">
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">OpenGL</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Vulkan</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">GLFW</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">GLFW</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">OpenGL</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">ImGui</li>
+                <li class="px-3 py-1 text-sm border border-amber-400/40 bg-amber-400/10 rounded-full hover:border-amber-400/70 transition-colors">Vulkan</li>
             </ul>
 
             <p class="text-2xl font-bold mb-4">Tools</p>
             <ul class="flex flex-wrap gap-2">
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Linux</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">VSCode</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Git</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Postman</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">CMake</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Ghidra</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">x64dbg</li>
-                <li class="px-3 py-1 text-sm border border-white/20 rounded-full hover:border-white/60 hover:bg-white/5 transition-colors">Krita</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Linux</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">VSCode</li>
+                <li class="px-3 py-1 text-sm border border-emerald-400/40 bg-emerald-400/10 rounded-full hover:border-emerald-400/70 transition-colors">Git</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Postman</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Krita</li>
+                <li class="px-3 py-1 text-sm border border-blue-400/40 bg-blue-400/10 rounded-full hover:border-blue-400/70 transition-colors">Ghidra</li>
+                <li class="px-3 py-1 text-sm border border-amber-400/40 bg-amber-400/10 rounded-full hover:border-amber-400/70 transition-colors">x64dbg</li>
+                <li class="px-3 py-1 text-sm border border-amber-400/40 bg-amber-400/10 rounded-full hover:border-amber-400/70 transition-colors">CMake</li>
             </ul>
+
+            <div class="flex flex-wrap gap-4 mt-8 text-xs text-white/50">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/60"></span>
+                    Proficient
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-400/60"></span>
+                    Comfortable
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400/60"></span>
+                    Familiar
+                </div>
+            </div>
         </div>
     </div>
 </section>

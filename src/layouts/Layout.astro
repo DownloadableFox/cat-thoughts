@@ -7,14 +7,33 @@
         <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
         <meta name="google-site-verification" content="YHGPpZnhTLJQj2DmR2VRmFuD74vopKyIcNkPIpMM-50" />
-        
+
         <title>Cat Thoughts</title>
-        
+
         <meta property="og:title" content="DownloadableFox">
         <meta property="og:description" content="Engineering student, developer, and cat on the internet.">
         <meta property="og:image" content="https://downloadablefox.dev/preview.jpg">
         <meta property="og:url" content="https://downloadablefox.dev/">
         <meta property="og:type" content="website">
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://downloadablefox.dev/#person",
+            "name": "Augusto Pedicino",
+            "url": "https://downloadablefox.dev/",
+            "image": "https://downloadablefox.dev/profile.webp",
+            "jobTitle": "Software Engineer",
+            "description": "Systems Engineering student and software developer specializing in Go, C++, cyber security, reverse engineering, graphics programming, and backend development.",
+            "email": "mailto:me@downloadablefox.dev",
+            "sameAs": [
+                "https://github.com/DownloadableFox",
+                "https://instagram.com/sorrelbyte",
+                "https://bsky.app/profile/downloadablefox.dev",
+            ]
+        }
+        </script>
     </head>
     <body class="bg-bg text-foreground font-mono text-white">
         <slot />
